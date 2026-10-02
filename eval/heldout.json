@@ -1,0 +1,200 @@
+{
+  "_comment": "Held-out eval set for Phase 5 retrieval-quality work (D40). Written blind, before any gate/ranking code exists, from eval/fixtures.json's stored corpus only. Queries paraphrase stored content; none were copied from fixtures.json's existing items.",
+  "items": [
+    {
+      "id": "ho_sh1",
+      "category": "single-hop",
+      "query": "What tool catches style problems in nova before a merge?",
+      "project": "nova",
+      "expected": ["c_dx_nova_2"]
+    },
+    {
+      "id": "ho_sh2",
+      "category": "single-hop",
+      "query": "Do we have Grafana dashboards set up for nova yet?",
+      "project": "nova",
+      "expected": ["c_dx_nova_6"]
+    },
+    {
+      "id": "ho_sh3",
+      "category": "single-hop",
+      "query": "Where does nova get its credentials from at runtime?",
+      "project": "nova",
+      "expected": ["c_dx_nova_13"]
+    },
+    {
+      "id": "ho_sh4",
+      "category": "single-hop",
+      "query": "Did we drop any dependencies from nova recently?",
+      "project": "nova",
+      "expected": ["c_dx_nova_17"]
+    },
+    {
+      "id": "ho_sh5",
+      "category": "single-hop",
+      "query": "What tidies up the style of atlas's source before a commit?",
+      "project": "atlas",
+      "expected": ["c_dx_atlas_7"]
+    },
+    {
+      "id": "ho_sh6",
+      "category": "single-hop",
+      "query": "Is atlas's mail config coming from env vars or a file?",
+      "project": "atlas",
+      "expected": ["c_dx_atlas_9"]
+    },
+    {
+      "id": "ho_sh7",
+      "category": "single-hop",
+      "query": "What was dragging down atlas's admin screen before someone fixed it?",
+      "project": "atlas",
+      "expected": ["c_dx_atlas_15"]
+    },
+    {
+      "id": "ho_sh8",
+      "category": "single-hop",
+      "query": "What do we use to catch problems in atlas before they reach users?",
+      "project": "atlas",
+      "expected": ["c_dx_atlas_18"]
+    },
+    {
+      "id": "ho_sh9",
+      "category": "single-hop",
+      "query": "Has finch ever gone down, and how long did it take to get back up?",
+      "project": "finch",
+      "expected": ["c_dx_finch_5"]
+    },
+    {
+      "id": "ho_sh10",
+      "category": "single-hop",
+      "query": "Which secrets manager does finch use?",
+      "project": "finch",
+      "expected": ["c_dx_finch_13"]
+    },
+    {
+      "id": "ho_sh11",
+      "category": "single-hop",
+      "query": "Do I have a recurring sync with my manager, and how often?",
+      "project": null,
+      "expected": ["c_dx_general_2"]
+    },
+    {
+      "id": "ho_u1",
+      "category": "update",
+      "query": "What does nova write its records to nowadays?",
+      "project": "nova",
+      "current": "c_nova_db2",
+      "superseded": "c_nova_db1"
+    },
+    {
+      "id": "ho_u2",
+      "category": "update",
+      "query": "What's my current title or responsibility on the atlas project?",
+      "project": "atlas",
+      "current": "c_atlas_role2",
+      "superseded": "c_atlas_role1"
+    },
+    {
+      "id": "ho_u3",
+      "category": "update",
+      "query": "Who's actually delivering finch's push notifications right now?",
+      "project": "finch",
+      "current": "c_finch_push2",
+      "superseded": "c_finch_push1"
+    },
+    {
+      "id": "ho_u4",
+      "category": "update",
+      "query": "What payment platform does atlas run on at the moment?",
+      "project": "atlas",
+      "current": "c_atlas_billing2",
+      "superseded": "c_atlas_billing1"
+    },
+    {
+      "id": "ho_u5",
+      "category": "update",
+      "query": "If I schedule a call for 3pm, what part of the US should I assume you're in?",
+      "project": null,
+      "current": "c_user_tz2",
+      "superseded": "c_user_tz"
+    },
+    {
+      "id": "ho_u6",
+      "category": "update",
+      "query": "What manages access control for finch nowadays?",
+      "project": "finch",
+      "current": "c_finch_auth2",
+      "superseded": "c_finch_auth"
+    },
+    {
+      "id": "ho_ab1",
+      "category": "abstention",
+      "query": "What test runner did nova use before it moved to nextest?",
+      "forbidden": ["c_dx_nova_3"],
+      "hard_negative": true
+    },
+    {
+      "id": "ho_ab2",
+      "category": "abstention",
+      "query": "What CI system was atlas on before it moved to GitLab?",
+      "forbidden": ["c_dx_atlas_1"],
+      "hard_negative": true
+    },
+    {
+      "id": "ho_ab3",
+      "category": "abstention",
+      "query": "Does finch support Face ID or fingerprint login?",
+      "forbidden": ["c_finch_auth2", "c_finch_auth"],
+      "hard_negative": true
+    },
+    {
+      "id": "ho_ab4",
+      "category": "abstention",
+      "query": "Does nova auto-generate changelogs for each release?",
+      "forbidden": ["c_dx_nova_11", "c_dx_nova_19"],
+      "hard_negative": true
+    },
+    {
+      "id": "ho_ab5",
+      "category": "abstention",
+      "query": "Do I use a fitness monitor to track my sleep?",
+      "forbidden": ["c_dx_general_9"]
+    },
+    {
+      "id": "ho_ab6",
+      "category": "abstention",
+      "query": "Is there a good golf course near the office?",
+      "forbidden": ["c_dx_general_8"]
+    },
+    {
+      "id": "ho_ab7",
+      "category": "abstention",
+      "query": "Have I had a paper published in an academic journal?",
+      "forbidden": ["c_dx_general_3"]
+    },
+    {
+      "id": "ho_ab8",
+      "category": "abstention",
+      "query": "Do we get any kind of bundle discount for office internet and phone service?",
+      "forbidden": ["c_dx_nova_17", "c_dx_atlas_17", "c_dx_finch_17"]
+    },
+    {
+      "id": "ho_ab9",
+      "category": "abstention",
+      "query": "Did I ever mention what kind of coffee setup I have at home?",
+      "forbidden": []
+    },
+    {
+      "id": "ho_ab10",
+      "category": "abstention",
+      "query": "Have I ever brought up training for a marathon or doing triathlons?",
+      "forbidden": []
+    },
+    {
+      "id": "ho_ab11",
+      "category": "abstention",
+      "query": "Did I ever talk about adopting a pet?",
+      "forbidden": []
+    }
+  ]
+}

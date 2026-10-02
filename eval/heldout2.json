@@ -1,0 +1,222 @@
+{
+  "_comment": "Held-out-2 for Phase 6, written blind from eval/fixtures.json's stored corpus only, before any run against it; queries are new (not edits of eval/heldout.json or fixtures items).",
+  "items": [
+    {
+      "id": "ho2_sh1",
+      "category": "single-hop",
+      "query": "Can a different group embed nova's code in their product without legal trouble?",
+      "project": "nova",
+      "expected": ["c_nova_license"]
+    },
+    {
+      "id": "ho2_sh2",
+      "category": "single-hop",
+      "query": "What kind of server box is atlas living on right now?",
+      "project": "atlas",
+      "expected": ["c_atlas_hosting"]
+    },
+    {
+      "id": "ho2_sh3",
+      "category": "single-hop",
+      "query": "What library makes finch's screens refresh when the underlying data changes?",
+      "project": "finch",
+      "expected": ["c_finch_state"]
+    },
+    {
+      "id": "ho2_sh4",
+      "category": "single-hop",
+      "query": "What reads the flags people type when invoking nova from a terminal?",
+      "project": "nova",
+      "expected": ["c_nova_cli"]
+    },
+    {
+      "id": "ho2_sh5",
+      "category": "single-hop",
+      "query": "Which JavaScript framework and CSS toolkit power atlas's browser side?",
+      "project": "atlas",
+      "expected": ["c_atlas_frontend"]
+    },
+    {
+      "id": "ho2_sh6",
+      "category": "single-hop",
+      "query": "Does finch target both phone operating systems, and in what language?",
+      "project": "finch",
+      "expected": ["c_finch_lang"]
+    },
+    {
+      "id": "ho2_sh7",
+      "category": "single-hop",
+      "query": "What crashed nova in production that one time, and how fast did we recover?",
+      "project": "nova",
+      "expected": ["c_dx_nova_5"]
+    },
+    {
+      "id": "ho2_sh8",
+      "category": "single-hop",
+      "query": "What dominated the discussion at atlas's previous sprint look-back meeting?",
+      "project": "atlas",
+      "expected": ["c_dx_atlas_16"]
+    },
+    {
+      "id": "ho2_sh9",
+      "category": "single-hop",
+      "query": "What was making finch's scrolling stutter before we tuned it?",
+      "project": "finch",
+      "expected": ["c_dx_finch_15"]
+    },
+    {
+      "id": "ho2_sh10",
+      "category": "single-hop",
+      "query": "How often does atlas push out a new version?",
+      "project": "atlas",
+      "expected": ["c_dx_atlas_11"]
+    },
+    {
+      "id": "ho2_sh11",
+      "category": "single-hop",
+      "query": "Which hosted build service compiles finch whenever someone merges a change?",
+      "project": "finch",
+      "expected": ["c_dx_finch_1"]
+    },
+    {
+      "id": "ho2_sh12",
+      "category": "single-hop",
+      "query": "Which relational engine sits behind atlas's PHP server?",
+      "project": "atlas",
+      "expected": ["c_atlas_db"]
+    },
+    {
+      "id": "ho2_sh13",
+      "category": "single-hop",
+      "query": "How does finch learn which backend address to talk to?",
+      "project": "finch",
+      "expected": ["c_dx_finch_9"]
+    },
+    {
+      "id": "ho2_u1",
+      "category": "update",
+      "query": "Now that nova has to stay consistent between several computers, what is it persisting everything into?",
+      "project": "nova",
+      "current": "c_nova_db2",
+      "superseded": "c_nova_db1"
+    },
+    {
+      "id": "ho2_u2",
+      "category": "update",
+      "query": "Am I still just squashing UI bugs on atlas, or has my position changed?",
+      "project": "atlas",
+      "current": "c_atlas_role2",
+      "superseded": "c_atlas_role1"
+    },
+    {
+      "id": "ho2_u3",
+      "category": "update",
+      "query": "Which vendor sends finch's phone alerts out to people today?",
+      "project": "finch",
+      "current": "c_finch_push2",
+      "superseded": "c_finch_push1"
+    },
+    {
+      "id": "ho2_u4",
+      "category": "update",
+      "query": "Who is charging atlas customers' cards these days?",
+      "project": "atlas",
+      "current": "c_atlas_billing2",
+      "superseded": "c_atlas_billing1"
+    },
+    {
+      "id": "ho2_u5",
+      "category": "update",
+      "query": "Since I moved, which coast's clock should you assume I'm keeping?",
+      "project": null,
+      "current": "c_user_tz2",
+      "superseded": "c_user_tz"
+    },
+    {
+      "id": "ho2_u6",
+      "category": "update",
+      "query": "Who verifies people's identity when they log into finch at present?",
+      "project": "finch",
+      "current": "c_finch_auth2",
+      "superseded": "c_finch_auth"
+    },
+    {
+      "id": "ho2_ab1",
+      "category": "abstention",
+      "query": "Which managed Kubernetes provider did we end up moving atlas onto?",
+      "forbidden": ["c_atlas_hosting"],
+      "hard_negative": true
+    },
+    {
+      "id": "ho2_ab2",
+      "category": "abstention",
+      "query": "Did finch ever try Bloc or Provider before settling on its current approach to app state?",
+      "forbidden": ["c_finch_state"],
+      "hard_negative": true
+    },
+    {
+      "id": "ho2_ab3",
+      "category": "abstention",
+      "query": "How long did atlas's migration from MySQL to Postgres take?",
+      "forbidden": ["c_atlas_db", "c_nova_db2"],
+      "hard_negative": true
+    },
+    {
+      "id": "ho2_ab4",
+      "category": "abstention",
+      "query": "Which exact version of clap is nova pinned to?",
+      "forbidden": ["c_nova_cli"],
+      "hard_negative": true
+    },
+    {
+      "id": "ho2_ab5",
+      "category": "abstention",
+      "query": "Which Stripe pricing tier was atlas on back when we used it?",
+      "forbidden": ["c_atlas_billing1", "c_atlas_billing2"],
+      "hard_negative": true
+    },
+    {
+      "id": "ho2_ab6",
+      "category": "abstention",
+      "query": "What alert threshold did we configure in Sentry for finch's error spikes?",
+      "forbidden": ["c_dx_finch_18"],
+      "hard_negative": true
+    },
+    {
+      "id": "ho2_ab7",
+      "category": "abstention",
+      "query": "Where did I put the spare key to my storage unit?",
+      "forbidden": ["c_nova_db2", "c_dx_nova_16"]
+    },
+    {
+      "id": "ho2_ab8",
+      "category": "abstention",
+      "query": "Did I remember to renew my driver's license this year?",
+      "forbidden": ["c_nova_license"]
+    },
+    {
+      "id": "ho2_ab9",
+      "category": "abstention",
+      "query": "When is the next season of my favourite show getting its release?",
+      "forbidden": ["c_dx_nova_11", "c_dx_atlas_11", "c_dx_finch_11"]
+    },
+    {
+      "id": "ho2_ab10",
+      "category": "abstention",
+      "query": "Which keyboard shortcut did I bind to my screenshot tool?",
+      "forbidden": ["c_dx_general_4"]
+    },
+    {
+      "id": "ho2_ab11",
+      "category": "abstention",
+      "query": "Hey, how's your day going so far?",
+      "forbidden": []
+    },
+    {
+      "id": "ho2_ab12",
+      "category": "abstention",
+      "query": "Did I tell you which hotel I booked for the conference trip?",
+      "forbidden": []
+    }
+  ]
+}

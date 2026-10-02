@@ -1,0 +1,10 @@
+{"type":"permission-mode","permissionMode":"default","sessionId":"sess-fixture"}
+{"type":"user","uuid":"u1","timestamp":"2026-09-20T10:00:00.000Z","isSidechain":false,"sessionId":"sess-fixture","message":{"role":"user","content":"Which database should we use for the billing service?"}}
+{"type":"assistant","uuid":"a1","timestamp":"2026-09-20T10:00:05.000Z","isSidechain":false,"sessionId":"sess-fixture","message":{"role":"assistant","content":[{"type":"thinking","thinking":"private reasoning about options"}]}}
+{"type":"assistant","uuid":"a2","timestamp":"2026-09-20T10:00:06.000Z","isSidechain":false,"sessionId":"sess-fixture","message":{"role":"assistant","content":[{"type":"text","text":"For the billing service I recommend PostgreSQL because of its transactional guarantees."}]}}
+{"type":"assistant","uuid":"a3","timestamp":"2026-09-20T10:00:07.000Z","isSidechain":false,"sessionId":"sess-fixture","message":{"role":"assistant","content":[{"type":"tool_use","id":"toolu_1","name":"Bash","input":{"command":"ls"}}]}}
+{"type":"user","uuid":"u2","timestamp":"2026-09-20T10:00:08.000Z","isSidechain":false,"sessionId":"sess-fixture","message":{"role":"user","content":[{"type":"tool_result","tool_use_id":"toolu_1","content":"README.md\npackage.json"}]}}
+{"type":"assistant","uuid":"a4","timestamp":"2026-09-20T10:00:09.000Z","isSidechain":true,"sessionId":"sess-fixture","message":{"role":"assistant","content":[{"type":"text","text":"Sidechain chatter that must not be stored"}]}}
+{not json
+{"type":"assistant","uuid":"a5","timestamp":"2026-09-20T10:01:00.000Z","isSidechain":false,"sessionId":"sess-fixture","message":{"role":"assistant","content":[{"type":"text","text":"Done."}]}}
+{"type":"assistant","uuid":"a6","timestamp":"2026-09-20T10:02:00.000Z","isSidechain":false,"sessionId":"sess-fixture","message":{"role":"assistant","content":[{"type":"text","text":"Done."}]}}

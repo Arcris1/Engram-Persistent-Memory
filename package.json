@@ -1,0 +1,48 @@
+{
+  "name": "engram-mem",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local-first, event-sourced memory MCP server for Claude Code",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "ui"
+  ],
+  "bin": {
+    "engram": "bin/engram.js",
+    "engram-mcp": "bin/engram-mcp.js"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json && npm run build -w ui",
+    "typecheck": "tsc -p tsconfig.json --noEmit && npm run typecheck -w ui",
+    "pretest": "npm run build",
+    "test": "vitest run && npm test -w ui",
+    "eval": "npm run build && node dist/eval/run.js",
+    "check:network": "node scripts/check-no-network.mjs",
+    "check:ui-network": "node scripts/check-ui-network.mjs",
+    "ui:demo": "npm run build && node ui/scripts/demo.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.1.0",
+    "better-sqlite3": "13.0.3",
+    "ulid": "3.0.2",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "2.1.0",
+    "@types/better-sqlite3": "9.6.0",
+    "@types/node": "22.20.4",
+    "typescript": "6.0.3",
+    "vitest": "5.0.1"
+  },
+  "optionalDependencies": {
+    "@huggingface/tokenizers": "0.2.0",
+    "onnxruntime-node": "1.30.0"
+  }
+}

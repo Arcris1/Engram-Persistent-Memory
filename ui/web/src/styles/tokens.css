@@ -1,0 +1,29 @@
+/* Design tokens, from the approved UI design mockup (light and dark). */
+:root {
+  --paper: #F2F1F6;        /* cool lilac-grey ground */
+  --surface: #FFFFFF;
+  --ink: #1D1A2B;          /* aubergine ink */
+  --muted: #625D75;
+  --line: #DAD6E4;
+  --accent: #5A3FA6;       /* cresyl violet, the stain used to make memory traces visible */
+  --accent-soft: #ECE6F8;
+  --pin: #96600A;          /* Golgi amber, reserved for pinned */
+  --pin-soft: #F8EED9;
+  --danger: #B3261E;
+  --danger-soft: #FBE9E7;
+  --ok: #24704F;
+  --ok-soft: #E2F2EA;
+  --shadow: 0 12px 40px rgba(29, 26, 43, .16);
+  --ui: "Schibsted Grotesk Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --record: "Newsreader Variable", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --paper: #13111A; --surface: #1C1926; --ink: #EDEAF6; --muted: #A19CB4; --line: #2F2A3D;
+  --accent: #A990F2; --accent-soft: #2A2342; --pin: #E2AD55; --pin-soft: #35290F;
+  --danger: #F2877E; --danger-soft: #3A1B19; --ok: #6CC79E; --ok-soft: #173326;
+  --shadow: 0 12px 40px rgba(0, 0, 0, .5); color-scheme: dark } }
+:root[data-theme="dark"] {
+  --paper: #13111A; --surface: #1C1926; --ink: #EDEAF6; --muted: #A19CB4; --line: #2F2A3D;
+  --accent: #A990F2; --accent-soft: #2A2342; --pin: #E2AD55; --pin-soft: #35290F;
+  --danger: #F2877E; --danger-soft: #3A1B19; --ok: #6CC79E; --ok-soft: #173326;
+  --shadow: 0 12px 40px rgba(0, 0, 0, .5); color-scheme: dark }
